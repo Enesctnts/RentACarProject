@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\RentACarProject",
+    "\\RentACarProject\\ConsoleUI"
   ],
+  "SelectedNode": "\\RentACarProject\\ConsoleUI\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
