@@ -28,3 +28,5 @@ C:\Users\303ENES_SABAH\Documents\GitHub\RentACarProject\RentACarProject\Business
 C:\Users\303ENES_SABAH\Documents\GitHub\RentACarProject\RentACarProject\Business\bin\Debug\netcoreapp3.1\DataAccess.pdb
 C:\Users\303ENES_SABAH\Documents\GitHub\RentACarProject\RentACarProject\Business\bin\Debug\netcoreapp3.1\Entities.pdb
 C:\Users\303ENES_SABAH\Documents\GitHub\RentACarProject\RentACarProject\Business\obj\Debug\netcoreapp3.1\Business.csproj.CopyComplete
+C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\Business\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\Business\bin\Debug\netcoreapp3.1\Core.pdb

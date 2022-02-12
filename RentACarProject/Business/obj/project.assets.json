@@ -1468,10 +1468,24 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.11"
+        },
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
+      },
       "DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "Core": "1.0.0",
           "Entities": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.11"
         },
@@ -1485,6 +1499,9 @@
       "Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Core": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Entities.dll": {}
         },
@@ -5668,6 +5685,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
+    },
     "DataAccess/1.0.0": {
       "type": "project",
       "path": "../DataAccess/DataAccess.csproj",
@@ -5686,19 +5708,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\303ENES_SABAH\\.nuget\\packages\\": {}
+    "C:\\Users\\hp\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\303ENES_SABAH\\Documents\\GitHub\\RentACarProject\\RentACarProject\\Business\\Business.csproj",
+      "projectUniqueName": "C:\\Users\\hp\\Documents\\GitHub\\RentACarProject\\RentACarProject\\Business\\Business.csproj",
       "projectName": "Business",
-      "projectPath": "C:\\Users\\303ENES_SABAH\\Documents\\GitHub\\RentACarProject\\RentACarProject\\Business\\Business.csproj",
-      "packagesPath": "C:\\Users\\303ENES_SABAH\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\303ENES_SABAH\\Documents\\GitHub\\RentACarProject\\RentACarProject\\Business\\obj\\",
+      "projectPath": "C:\\Users\\hp\\Documents\\GitHub\\RentACarProject\\RentACarProject\\Business\\Business.csproj",
+      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hp\\Documents\\GitHub\\RentACarProject\\RentACarProject\\Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\303ENES_SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5706,17 +5728,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.org": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\303ENES_SABAH\\Documents\\GitHub\\RentACarProject\\RentACarProject\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\303ENES_SABAH\\Documents\\GitHub\\RentACarProject\\RentACarProject\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\hp\\Documents\\GitHub\\RentACarProject\\RentACarProject\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\hp\\Documents\\GitHub\\RentACarProject\\RentACarProject\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\303ENES_SABAH\\Documents\\GitHub\\RentACarProject\\RentACarProject\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\303ENES_SABAH\\Documents\\GitHub\\RentACarProject\\RentACarProject\\Entities\\Entities.csproj"
+            "C:\\Users\\hp\\Documents\\GitHub\\RentACarProject\\RentACarProject\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\hp\\Documents\\GitHub\\RentACarProject\\RentACarProject\\Entities\\Entities.csproj"
             }
           }
         }
@@ -5745,7 +5768,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
       }
     }
   }

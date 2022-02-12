@@ -18,3 +18,6 @@ C:\Users\303ENES_SABAH\Documents\GitHub\RentACarProject\RentACarProject\Entities
 C:\Users\303ENES_SABAH\Documents\GitHub\RentACarProject\RentACarProject\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.CoreCompileInputs.cache
 C:\Users\303ENES_SABAH\Documents\GitHub\RentACarProject\RentACarProject\Entities\obj\Debug\netcoreapp3.1\Entities.dll
 C:\Users\303ENES_SABAH\Documents\GitHub\RentACarProject\RentACarProject\Entities\obj\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\Entities\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\Entities\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.CopyComplete
