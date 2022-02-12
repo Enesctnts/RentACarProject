@@ -5686,19 +5686,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hp\\.nuget\\packages\\": {}
+    "C:\\Users\\303ENES_SABAH\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hp\\Documents\\GitHub\\RentACarProject\\RentACarProject\\Business\\Business.csproj",
+      "projectUniqueName": "C:\\Users\\303ENES_SABAH\\Documents\\GitHub\\RentACarProject\\RentACarProject\\Business\\Business.csproj",
       "projectName": "Business",
-      "projectPath": "C:\\Users\\hp\\Documents\\GitHub\\RentACarProject\\RentACarProject\\Business\\Business.csproj",
-      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hp\\Documents\\GitHub\\RentACarProject\\RentACarProject\\Business\\obj\\",
+      "projectPath": "C:\\Users\\303ENES_SABAH\\Documents\\GitHub\\RentACarProject\\RentACarProject\\Business\\Business.csproj",
+      "packagesPath": "C:\\Users\\303ENES_SABAH\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\303ENES_SABAH\\Documents\\GitHub\\RentACarProject\\RentACarProject\\Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\303ENES_SABAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5706,18 +5706,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.org": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\hp\\Documents\\GitHub\\RentACarProject\\RentACarProject\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\hp\\Documents\\GitHub\\RentACarProject\\RentACarProject\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\303ENES_SABAH\\Documents\\GitHub\\RentACarProject\\RentACarProject\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\303ENES_SABAH\\Documents\\GitHub\\RentACarProject\\RentACarProject\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\hp\\Documents\\GitHub\\RentACarProject\\RentACarProject\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\hp\\Documents\\GitHub\\RentACarProject\\RentACarProject\\Entities\\Entities.csproj"
+            "C:\\Users\\303ENES_SABAH\\Documents\\GitHub\\RentACarProject\\RentACarProject\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\303ENES_SABAH\\Documents\\GitHub\\RentACarProject\\RentACarProject\\Entities\\Entities.csproj"
             }
           }
         }
