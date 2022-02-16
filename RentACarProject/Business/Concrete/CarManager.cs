@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constants;
+using Core.Utilities.Result;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
@@ -18,65 +20,98 @@ namespace Business.Concrete
             _carDal = carDal;
         }
 
-        public void Add(Car car)
+        public IResult Add(Car car)
         {
-            if (car.Description.Length>2)
+            if (DateTime.Now.Hour == 22)
+            {
+                return new ErrorResult(Messages.MaintenanceTime);
+            }
+            else if (car.Description.Length>2)
             {
                 if (car.DailyPrice > 0)
                 {
-                    Console.WriteLine("Ürün Eklendi");
                     _carDal.Add(car);
+                    return new SuccessResult(Messages.CarAdded);
                 }
                 else
                 {
-                    Console.WriteLine("Araba günlük fiyat kuralına uymadınız.");
+                    return new ErrorResult(Messages.CarPriceInvalid);
                 }
                 
             }
             else
             {
-                Console.WriteLine("İsim kuralına uyamadınız.");
+                return new ErrorResult(Messages.CarNameInvalid);
             }
            
             
         }
 
-        public void Update(Car car)
+        public IResult Update(Car car)
         {
+            if (DateTime.Now.Hour == 22)
+            {
+                return new ErrorResult(Messages.MaintenanceTime);
+            }
             _carDal.Update(car);
-            Console.WriteLine("Ürün Güncellendi");
+            return new SuccessResult(Messages.CarUpdated);
+
         }
 
-        public void Delete(Car car)
+        public IResult Delete(Car car)
         {
+            if (DateTime.Now.Hour == 22)
+            {
+                return new ErrorResult(Messages.MaintenanceTime);
+            }
             _carDal.Delete(car);
-            Console.WriteLine("Ürün Silindi");
+            return new SuccessResult(Messages.CarDeleted);
         }
 
-        public Car Get(int id)
+        public IDataResult<Car> Get(int id)
         {
-            return _carDal.Get(p=>p.Id == id);
+            if (DateTime.Now.Hour == 22)
+            {
+                return new ErrorDataResult<Car>(Messages.MaintenanceTime);
+            }
+            return new SuccessDataResult<Car>(_carDal.Get(p=>p.Id == id),Messages.CarListed);
         }
 
-        public List<Car> GetAll()
+        public IDataResult<List<Car>> GetAll()
         {
-           return _carDal.GetAll();
+            if (DateTime.Now.Hour == 22)
+            {
+                return new ErrorDataResult<List<Car>>(Messages.MaintenanceTime);
+            }
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(),Messages.CarListed);
         }
 
         
-        public List<Car> GetCarsByBrandId(int id)
+        public IDataResult<List<Car>> GetCarsByBrandId(int id)
         {
-            return _carDal.GetAll(p => p.BrandId == id);
+            if (DateTime.Now.Hour == 22)
+            {
+                return new ErrorDataResult<List<Car>>(Messages.MaintenanceTime);
+            }
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(p => p.BrandId == id),Messages.CarListed);
         }
 
-        public List<Car> GetCarsByColorId(int id)
+        public IDataResult<List<Car>> GetCarsByColorId(int id)
         {
-            return _carDal.GetAll(p => p.ColorId == id);
+            if (DateTime.Now.Hour == 22)
+            {
+                return new ErrorDataResult<List<Car>>(Messages.MaintenanceTime);
+            }
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(p => p.ColorId == id),Messages.CarListed);
         }
 
-        public List<CarDetailDto> GetCarDetails()
+        public IDataResult<List<CarDetailDto>> GetCarDetails()
         {
-            return _carDal.GetCarDetails();
+            if (DateTime.Now.Hour == 22)
+            {
+                return new ErrorDataResult<List<CarDetailDto>>(Messages.MaintenanceTime);
+            }
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(),Messages.CarListed);
         }
     }
 }
