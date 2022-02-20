@@ -1,12 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\RentACarProject",
-    "\\RentACarProject\\ConsoleUI",
-    "\\RentACarProject\\DataAccess",
-    "\\RentACarProject\\DataAccess\\Concrete",
-    "\\RentACarProject\\DataAccess\\Concrete\\EntityFrameworkk"
+    "\\RentACarProject"
   ],
-  "SelectedNode": "\\RentACarProject\\DataAccess\\Concrete\\EntityFrameworkk\\EfBrandDal.cs",
+  "SelectedNode": "\\RentACarProject\\RentACarProject.sln",
   "PreviewInSolutionExplorer": false
 }
