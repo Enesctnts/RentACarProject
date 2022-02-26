@@ -16,7 +16,7 @@ namespace ConsoleUI
             //UserAdded();
             //UserUpdated();
             //CarAdded();
-            RentalAdded();
+            //RentalAdded();
             //RentalAllUpdate();
             //RentalList();
             //UserListDetail();
