@@ -67,3 +67,8 @@ C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\WebAPI\obj\Debug\ne
 C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.dll
 C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.pdb
 C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.genruntimeconfig.cache
+C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.dll
+C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
+C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
+C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\WebAPI\bin\Debug\netcoreapp3.1\Castle.Core.dll
