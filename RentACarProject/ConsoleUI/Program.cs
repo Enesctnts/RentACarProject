@@ -1,5 +1,6 @@
 ﻿using Business.Concrete;
 using Business.Constants;
+using Core.Entities.Concrete;
 using DataAccess.Concrete.EntityFrameworkk;
 using Entities.Concrete;
 using System;
@@ -31,10 +32,10 @@ namespace ConsoleUI
         private static void UserUpdated()
         {
             UserManager userManager = new UserManager(new EfUserDal());
-            Console.WriteLine(userManager.Update(new User { UserId = 4, FirstName = "ENES", LastName = "ÇETİNTAŞ", Email = "enesctnts@gmail.com", Password = "1907" }).Message);
-            Console.WriteLine(userManager.Update(new User { UserId = 5, FirstName = "UGUR", LastName = "ÖNSAL", Email = "ugrons@gmail.com", Password = "1212" }).Message);
-            Console.WriteLine(userManager.Update(new User { UserId = 6, FirstName = "VOLKAN", LastName = "DEMİREL", Email = "demirelvolkan@gmail.com", Password = "8562" }).Message);
-            Console.WriteLine(userManager.Update(new User { UserId = 7, FirstName = "ARDA", LastName = "TURAN", Email = "aTuran@gmail.com", Password = "1995" }).Message);
+            Console.WriteLine(userManager.Update(new User { UserId = 4, FirstName = "ENES", LastName = "ÇETİNTAŞ", Email = "enesctnts@gmail.com"}).Message);
+            Console.WriteLine(userManager.Update(new User { UserId = 5, FirstName = "UGUR", LastName = "ÖNSAL", Email = "ugrons@gmail.com"}).Message);
+            Console.WriteLine(userManager.Update(new User { UserId = 6, FirstName = "VOLKAN", LastName = "DEMİREL", Email = "demirelvolkan@gmail.com" }).Message);
+            Console.WriteLine(userManager.Update(new User { UserId = 7, FirstName = "ARDA", LastName = "TURAN", Email = "aTuran@gmail.com" }).Message);
         }
         private static void RentalAdded()
         {
@@ -60,19 +61,19 @@ namespace ConsoleUI
         private static void UserAdded()
         {
             UserManager userManager = new UserManager(new EfUserDal());
-            User user1 = new User { FirstName = "Ezgi", LastName = "Yücel", Email = "ezgiyucel@xmail.com", Password = "12345" };
+            User user1 = new User { FirstName = "Ezgi", LastName = "Yücel", Email = "ezgiyucel@xmail.com"};
             userManager.Add(user1);
 
-            User user2 = new User { FirstName = "ENES", LastName = "ÇETİNTAŞ", Email = "ezgiyucel@xmail.com", Password = "12345" };
+            User user2 = new User { FirstName = "ENES", LastName = "ÇETİNTAŞ", Email = "ezgiyucel@xmail.com"};
             userManager.Add(user2);
 
-            User user3 = new User { FirstName = "UGUR", LastName = "ÖNSAL", Email = "ezgiyucel@xmail.com", Password = "12345" };
+            User user3 = new User { FirstName = "UGUR", LastName = "ÖNSAL", Email = "ezgiyucel@xmail.com"};
             userManager.Add(user3);
 
-            User user4 = new User { FirstName = "VOLKAN", LastName = "DEMİREL", Email = "ezgiyucel@xmail.com", Password = "12345" };
+            User user4 = new User { FirstName = "VOLKAN", LastName = "DEMİREL", Email = "ezgiyucel@xmail.com" };
             userManager.Add(user4);
 
-            User user5 = new User { FirstName = "ARDA", LastName = "TURAN", Email = "ezgiyucel@xmail.com", Password = "12345" };
+            User user5 = new User { FirstName = "ARDA", LastName = "TURAN", Email = "ezgiyucel@xmail.com" };
             userManager.Add(user5);
         }
         private static void CustomerAdded()
@@ -196,7 +197,7 @@ namespace ConsoleUI
             foreach (var user in userManager.GetAll().Data)
             {
 
-                Console.WriteLine("Kullanıcı Id: {0}, Kıllanıcı Adı: {1}, Kullanıcı Soyadı: {2}, Email: {3} , Şifre: {4} ", user.UserId, user.FirstName, user.LastName, user.Email, user.Password);
+                Console.WriteLine("Kullanıcı Id: {0}, Kıllanıcı Adı: {1}, Kullanıcı Soyadı: {2}, Email: {3}", user.UserId, user.FirstName, user.LastName, user.Email);
             }
 
         }
