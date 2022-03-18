@@ -122,3 +122,12 @@ C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\ConsoleUI\bin\Debug
 C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Core.dll
 C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Autofac.dll
+C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
+C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
+C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+C:\Users\hp\Documents\GitHub\RentACarProject\RentACarProject\ConsoleUI\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
