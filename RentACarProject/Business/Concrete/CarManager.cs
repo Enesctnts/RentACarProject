@@ -2,6 +2,7 @@
 using Business.BusinessAspects.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Caching;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation.FluentValidation;
 using Core.Utilities.Business;
@@ -42,10 +43,7 @@ namespace Business.Concrete
         [ValidationAspect(typeof(CarValidator))]
         public IResult Update(Car car)
         {
-            if (DateTime.Now.Hour == 20)
-            {
-                return new ErrorResult(Messages.MaintenanceTime);
-            }
+           
             _carDal.Update(car);
             return new SuccessResult(Messages.CarUpdated);
 
@@ -53,57 +51,41 @@ namespace Business.Concrete
 
         public IResult Delete(Car car)
         {
-            if (DateTime.Now.Hour == 20)
-            {
-                return new ErrorResult(Messages.MaintenanceTime);
-            }
+            
             _carDal.Delete(car);
             return new SuccessResult(Messages.CarDeleted);
         }
 
+        [CacheAspect] 
         public IDataResult<Car> Get(int id)
         {
-            if (DateTime.Now.Hour == 20)
-            {
-                return new ErrorDataResult<Car>(Messages.MaintenanceTime);
-            }
+            
             return new SuccessDataResult<Car>(_carDal.Get(p => p.Id == id), Messages.CarListed);
         }
 
+        [CacheAspect]//key, value
         public IDataResult<List<Car>> GetAll()
         {
-            if (DateTime.Now.Hour == 20)
-            {
-                return new ErrorDataResult<List<Car>>(Messages.MaintenanceTime);
-            }
+            
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(), Messages.CarListed);
         }
 
 
         public IDataResult<List<Car>> GetCarsByBrandId(int id)
         {
-            if (DateTime.Now.Hour == 20)
-            {
-                return new ErrorDataResult<List<Car>>(Messages.MaintenanceTime);
-            }
+            
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(p => p.BrandId == id), Messages.CarListed);
         }
 
         public IDataResult<List<Car>> GetCarsByColorId(int id)
         {
-            if (DateTime.Now.Hour == 20)
-            {
-                return new ErrorDataResult<List<Car>>(Messages.MaintenanceTime);
-            }
+            
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(p => p.ColorId == id), Messages.CarListed);
         }
 
         public IDataResult<List<CarDetailDto>> GetCarDetails()
         {
-            if (DateTime.Now.Hour == 20)
-            {
-                return new ErrorDataResult<List<CarDetailDto>>(Messages.MaintenanceTime);
-            }
+           
             return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(), Messages.CarListed);
         }
 
