@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace Core.DependencyResolvers
@@ -18,6 +19,7 @@ namespace Core.DependencyResolvers
             serviceCollection.AddMemoryCache();//Alttaklerle ayni işi yapıyor. Sadece MemoryCache hazır bir yapi oldugu için bunu bize microsoft yazmış biz direk bu şekilde yapınca arkada tarafta instance sini oluşturuyor. IMemoryCache  istenildiği zaman gelip bakıyor ve burada eklendiğini görünce arka tarafta oluşan instance kullanıyor.
             serviceCollection.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             serviceCollection.AddSingleton<ICacheManager, MemoryCacheManager>();
+            serviceCollection.AddSingleton<Stopwatch>();
 
         }
     }

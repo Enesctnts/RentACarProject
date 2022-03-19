@@ -3,6 +3,8 @@ using Business.BusinessAspects.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Caching;
+using Core.Aspects.Autofac.Performance;
+using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation.FluentValidation;
 using Core.Utilities.Business;
@@ -28,6 +30,7 @@ namespace Business.Concrete
 
         [SecuredOperation("car.add")] // Yetki Kontrolü yapıyoruz.
         [ValidationAspect(typeof(CarValidator))]
+        [CacheRemoveAspect("ICarService.Get")]
         public IResult Add(Car car)
         {
             var result = BusinessRules.Run(CheckIfProductNameExists(car.Description));
@@ -41,6 +44,7 @@ namespace Business.Concrete
         }
 
         [ValidationAspect(typeof(CarValidator))]
+        [CacheRemoveAspect("ICarService.Get")]
         public IResult Update(Car car)
         {
            
@@ -49,6 +53,7 @@ namespace Business.Concrete
 
         }
 
+        [CacheRemoveAspect("ICarService.Get")]
         public IResult Delete(Car car)
         {
             
@@ -57,6 +62,7 @@ namespace Business.Concrete
         }
 
         [CacheAspect] 
+        [PerformanceAspect(5)]
         public IDataResult<Car> Get(int id)
         {
             
@@ -70,13 +76,14 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(), Messages.CarListed);
         }
 
-
+        [CacheAspect]
         public IDataResult<List<Car>> GetCarsByBrandId(int id)
         {
             
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(p => p.BrandId == id), Messages.CarListed);
         }
 
+        [CacheAspect]
         public IDataResult<List<Car>> GetCarsByColorId(int id)
         {
             
@@ -89,6 +96,9 @@ namespace Business.Concrete
             return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(), Messages.CarListed);
         }
 
+
+        #region BusinessRules
+
         private IResult CheckIfProductNameExists(string carName)
         {
             var result = _carDal.GetAll(c => c.Description == carName).Any();
@@ -100,5 +110,8 @@ namespace Business.Concrete
             return new SuccessResult();
         }
 
+        #endregion
+
+        
     }
 }
