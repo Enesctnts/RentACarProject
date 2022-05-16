@@ -7,4 +7,4 @@ bilgileri güncelleme gibi bir çok işlemin yapıldığı E-Ticaret sitesidir.<
 # Kullanılan Teknolojiler 
 
 <h3>.Net Core, N-layer Architecture, Desing Patterns, Autofac, FluentValidation,
-JWT Bearer, Web Api, AOP (Caching, Validation, Performance, Transaction)<h3>
+JWT Bearer, Web Api, AOP (Caching, Validation, Performance, Transaction), MSSQL, CodeFirst, EntityFramework...<h3>
